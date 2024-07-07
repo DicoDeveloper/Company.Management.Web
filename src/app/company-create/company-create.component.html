@@ -1,0 +1,14 @@
+<h2>Criar Empresa</h2>
+<form (ngSubmit)="createCompany()">
+  <label>Nome:</label>
+  <input [(ngModel)]="company.name" name="name" required placeholder="Nome" />
+  <br />
+  <label>Tamanho da empresa:</label>
+  <select name="sizeType" [(ngModel)]="company.sizeType">
+    <option *ngFor="let type of sizeTypes" [ngValue]="type">
+      {{ type }}
+    </option>
+  </select>
+  <br />
+  <button type="submit">Criar</button>
+</form>

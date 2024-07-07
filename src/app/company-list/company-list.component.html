@@ -1,0 +1,9 @@
+<h2>Empresas</h2>
+<a routerLink="/create">Cadastrar nova Empresa</a>
+<ul>
+  <li *ngFor="let company of companies">
+    {{ company.name }} - {{ company.sizeType }}
+    <a [routerLink]="['/edit', company.id]">Editar</a>
+    <button (click)="deleteCompany(company.id)">Excluir</button>
+  </li>
+</ul>
